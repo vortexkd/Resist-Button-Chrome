@@ -15,6 +15,7 @@ equal weightage to the choice of making a purchase.
 Hopefully, by making the choice visible and positive as opposed to invisible and negative (no button, and no positive feedback)
 We can reduce the burden on sheer human willpower.
 
+![This is what the button looks like](assets/demo_1.png)
 
 ## Currently handled sites
 - amazon.com
