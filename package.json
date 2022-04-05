@@ -1,0 +1,19 @@
+{
+  "name": "resist-button",
+  "version": "0.0.1",
+  "description": "Adds a 'Resist!!' button alongside the Buy now / add to cart options on various websites.",
+  "main": "background.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha || true"
+  },
+  "author": "Pattamada Chinnapa",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.2",
+    "phantomjs": "^2.1.7",
+    "sinon": "^13.0.1"
+  }
+}

@@ -1,0 +1,14 @@
+
+#amazon_resist_button {
+  height: 30px;
+  width: 100%;
+  border-radius: 15px;
+  /*background-color: #44AF69;*/
+  background-color: #63c384;
+  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  margin-bottom: 8px;
+  border: none;
+}
+#amazon_resist_button:hover {
+  background-color: #44AF69;
+}

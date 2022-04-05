@@ -1,0 +1,33 @@
+{
+  "name": "Resist Button",
+  "description": "Adds a 'Resist!!' button alongside the Buy now / add to cart options on various websites.",
+  "version": "0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "permissions": ["<all_urls>", "declarativeContent", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.com/*"],
+      "js": ["src/main.js"],
+      "css": ["src/content/styles/amazon_com_styles.css"]
+    },
+    {
+      "matches": ["https://www.amazon.co.jp/*"],
+      "js": ["src/main.js"],
+      "css": ["src/content/styles/amazon_com_styles.css"]
+    }
+  ],
+  "web_accessible_resources":
+  [
+    {
+      "matches": ["http://*/*"],
+      "resources": ["src/content/*.js", "src/content/common.js", "src/messages.js"]
+    },
+    {
+      "matches": ["https://*/*"],
+      "resources": ["src/content/*.js", "src/content/common.js", "src/messages.js"]
+    }
+  ]
+}
