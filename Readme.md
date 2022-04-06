@@ -17,6 +17,12 @@ We can reduce the burden on sheer human willpower.
 
 ![This is what the button looks like](assets/demo_1.png)
 
+
+
+This is what the popup looks like. Image and text message are somewhat randomized to optimize the dopamine kick.
+
+![This is what the popup looks like](assets/demo_2.png)
+
 ## Currently handled sites
 - amazon.com
 - amazon.co.jp
@@ -24,7 +30,16 @@ We can reduce the burden on sheer human willpower.
 ## Todos
 
 - Put together a list of sites to handle and begin making resist buttons that fit in with the site's design.
+  - current progress: 0%.
 - Improve positive feedback mechanism (currently it's just a browser alert... which isn't really a dopamine kick.)
+  - current progress: 30%.
+  - Remainder:
+    - Requires mobile design.
+    - Requires close dialog edge case handling.
+    - Consider adding CTA to close the tab: what should the design look like?
+    - Consider adding opacity div to the background of the popup to improve contrast (and enable click to dismiss)
+    - Handle multilingual messages for popup.
+    - Might have underestimated the amount of css required. If it gets a lot consider moving to sass.
 
 
 ## Privacy

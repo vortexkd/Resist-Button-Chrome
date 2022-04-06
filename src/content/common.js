@@ -12,12 +12,27 @@ export function insertResistButton(buyButtonId, resistButtonId, resistButtonText
     resistButton.innerText = resistButtonText;
     resistButton.type = "button";
     resistButton.id = resistButtonId;
-    resistButton.onclick = clickedResistButton;
+    resistButton.onclick = getClickedResistButtonAction();
     buyButton.parentNode.insertBefore(resistButton, buyButton);
     return resistButton;
   }
 }
 
+export function loadPopupContent(message) {
+  const extId = document.getElementById("successfully-resisted-popup").getAttribute('data-ext-id');
+  document.getElementById("successfully-resisted-popup").style.display = "block";
+  document.getElementById("successfully-resisted-title").innerText = message.title;
+  document.getElementById("successfully-resisted-message").innerText = message.message;
+  document.getElementById("successfully-resisted-image").setAttribute('src', `chrome-extension://${extId}/${message.image}`);
+  document.getElementById("successfully-resisted-img-attribution").innerHTML = message.attribution
+}
+
+export function getClickedResistButtonAction() {
+  return () => {
+    const message = getMessage();
+    loadPopupContent(message)
+  }
+}
 
 export function clickedResistButton() {
   /* On click of the button we will display an alert with a randomly chosen message. */

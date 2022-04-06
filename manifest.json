@@ -23,11 +23,13 @@
   [
     {
       "matches": ["http://*/*"],
-      "resources": ["src/content/*.js", "src/content/common.js", "src/messages.js"]
+      "resources": ["src/content/*.js", "src/content/common.js", "src/messages.js", "src/content/popup_content.html",
+        "images/*"]
     },
     {
       "matches": ["https://*/*"],
-      "resources": ["src/content/*.js", "src/content/common.js", "src/messages.js"]
+      "resources": ["src/content/*.js", "src/content/common.js", "src/messages.js", "src/content/popup_content.html",
+        "images/*"]
     }
   ]
 }

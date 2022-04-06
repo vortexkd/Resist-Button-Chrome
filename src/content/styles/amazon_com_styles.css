@@ -1,3 +1,4 @@
+/* using IDs to style because we want to make sure that there is no interference with existing styles on he page. maybe overkill */
 
 #amazon_resist_button {
   height: 30px;
@@ -11,4 +12,53 @@
 }
 #amazon_resist_button:hover {
   background-color: #44AF69;
+}
+
+#successfully-resisted-popup {
+  position: absolute;
+  width: 50%;
+  max-width: 500px;
+  background-color: #ffffff;
+  z-index: 999;
+  top: 10%;
+  left: 50%;
+  margin-left: -250px;
+  height: 50%;
+  padding: 20px;
+  border: 10px solid rgb(99, 195, 132);
+  box-shadow: 0 2px 10px 0 rgb(213 217 217);
+  display: none;
+}
+
+#successfully-resisted-popup #successfully-resisted-message {
+  text-align: center;
+}
+
+#successfully-resisted-popup #successfully-resisted-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#successfully-resisted-popup #successfully-resisted-image {
+  height: 140px;
+  margin: auto;
+  display: block;
+}
+#successfully-resisted-popup #successfully-resisted-img-attribution a {
+  color: #cccccc;
+  font-size: 0.7rem;
+  text-decoration: underline;
+  text-align: center;
+  display: block;
+}
+#successfully-resisted-close-button {
+  border: none;
+  width: 100px;
+  padding: 10px;
+  background-color: #FFD814;
+}
+#successfully-resisted-popup .resist-close-button-container {
+  display: flex;
+  justify-content: center;
 }

@@ -19,8 +19,18 @@ function insertScriptTag(url) {
   head.insertBefore(script, head.lastChild);
 }
 
+async function insertResistPopup(url, extId) {
+  let newElement = document.createElement('div');
+  newElement.setAttribute('id', 'successfully-resisted-popup')
+  newElement.setAttribute('data-ext-id', extId)
+
+  document.querySelector("body").insertBefore(newElement, null);
+  document.getElementById("successfully-resisted-popup").innerHTML = await (await fetch(url)).text();
+}
+
 let jsFile = pickCorrectJs();
 if (jsFile != null) {
   console.log(jsFile);
   insertScriptTag(chrome.runtime.getURL(jsFile));
+  insertResistPopup(chrome.runtime.getURL('src/content/popup_content.html'), chrome.runtime.id);
 }
