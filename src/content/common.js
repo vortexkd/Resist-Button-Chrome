@@ -35,7 +35,3 @@ export function getClickedResistButtonAction(language) {
   }
 }
 
-export function clickedResistButton() {
-  /* On click of the button we will display an alert with a randomly chosen message. */
-  alert(getMessage());
-}
