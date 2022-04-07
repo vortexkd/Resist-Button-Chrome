@@ -27,19 +27,29 @@ This is what the popup looks like. Image and text message are somewhat randomize
 - amazon.com
 - amazon.co.jp
 
-## Todos
+## Todos (Roadmap)
 
 - Put together a list of sites to handle and begin making resist buttons that fit in with the site's design.
-  - current progress: 0%.
+  - Sites to support **(help wanted!)**
+    - Other amazons (amazon.in, amazon.uk etc)
+    - ebay.com
+    - rakuten.co.jp
+    - apple.com
+    - samsung.com
+    - walmart.com
+    - etsy.com
+    - ikea.com
+    - homedepot.com
 - Improve positive feedback mechanism
-  - current progress: 30%.
-  - Remainder:
-    - Consider adding CTA to close the tab: what should the design look like?
-    - Consider adding opacity div to the background of the popup to improve contrast (and enable click to dismiss)
-    - Might have underestimated the amount of css required. If it gets a lot consider moving to sass.
-    - Amazon does not use media queries to render responsive design. Can we get device type and switch the styling that way..?
-    - Increase variety of messages to 20 per language (target)
-
+  - Consider adding CTA to close the tab: what should the design look like?
+  - Consider adding opacity div to the background of the popup to improve contrast (and enable click to dismiss)
+  - Might have underestimated the amount of css required. If it gets a lot consider moving to sass.
+  - Amazon does not use media queries to render responsive design. Can we get device type and switch the styling that way..?
+  - Increase variety of messages to 20 per language (target)
+- Settings page
+  - Domain blacklist (do not function on these domains)
+- Flexible buy button detection (hard).
+  - Detect buy buttons on unsupported websites and inject resist!! button (requires turn-off switch because of potential design breaks.)
 
 ## Privacy
 
@@ -49,3 +59,5 @@ If this takes off and users want it, it might be helpful to track the number of 
 the resist button and how much was totally not-spent as a result.
 If this is done it would still be purely for the user's own benefit and not shared / sold.
 
+## Help wanted
+Mobile app users are probably far more prevalent than chrome users. Any ideas on how similar functionality can be implemented for apps?
