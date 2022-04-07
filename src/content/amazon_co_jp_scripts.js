@@ -14,10 +14,12 @@ if (language?.includes('ja')) {
 
 insertResistButton('buyNow_feature_div',
   'amazon_resist_button',
-  buttonText
+  buttonText,
+  language
 );
 
 insertResistButton('submitOrderButtonId',
   'amazon_resist_button',
-  buttonText
+  buttonText,
+  language
 );

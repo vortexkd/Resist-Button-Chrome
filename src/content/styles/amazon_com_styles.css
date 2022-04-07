@@ -35,9 +35,9 @@
 }
 
 #successfully-resisted-popup #successfully-resisted-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
-  margin-top: 10px;
+  margin: 20px 0;
 }
 
 #successfully-resisted-popup #successfully-resisted-image {
@@ -57,8 +57,36 @@
   width: 100px;
   padding: 10px;
   background-color: #FFD814;
+  cursor: pointer;
+}
+#successfully-resisted-close-button:hover {
+  background-color: #F7CA00;
 }
 #successfully-resisted-popup .resist-close-button-container {
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  /* TODO: amazon is not using responsive css, but rather some user agent header or something to render different pages. */
+  #amazon_resist_button {
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    padding: 1.2rem 1.6rem 1.2rem 1.7rem;
+    height: 4.7rem;
+  }
+  #successfully-resisted-popup {
+    position: fixed;
+    width: 80%;
+    margin-left: calc(80vw / 2 * -1);
+  }
+  #successfully-resisted-popup #successfully-resisted-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  #successfully-resisted-popup #successfully-resisted-message {
+    font-size: 1.2rem;
+  }
+  #successfully-resisted-popup #successfully-resisted-img-attribution a {
+    font-size: 0.9rem;
+  }
 }

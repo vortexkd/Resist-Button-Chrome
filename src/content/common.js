@@ -1,7 +1,7 @@
 import {getMessage} from "../messages.js";
 
 
-export function insertResistButton(buyButtonId, resistButtonId, resistButtonText) {
+export function insertResistButton(buyButtonId, resistButtonId, resistButtonText, language = 'en') {
   /* inserts a resist button before the specified button Id.
   Allows custom styling using css that matches the resistButtonId */
   let buyButton = document.getElementById(buyButtonId);
@@ -12,7 +12,7 @@ export function insertResistButton(buyButtonId, resistButtonId, resistButtonText
     resistButton.innerText = resistButtonText;
     resistButton.type = "button";
     resistButton.id = resistButtonId;
-    resistButton.onclick = getClickedResistButtonAction();
+    resistButton.onclick = getClickedResistButtonAction(language);
     buyButton.parentNode.insertBefore(resistButton, buyButton);
     return resistButton;
   }
@@ -25,11 +25,12 @@ export function loadPopupContent(message) {
   document.getElementById("successfully-resisted-message").innerText = message.message;
   document.getElementById("successfully-resisted-image").setAttribute('src', `chrome-extension://${extId}/${message.image}`);
   document.getElementById("successfully-resisted-img-attribution").innerHTML = message.attribution
+  document.getElementById("successfully-resisted-close-button").innerHTML = message.close
 }
 
-export function getClickedResistButtonAction() {
+export function getClickedResistButtonAction(language) {
   return () => {
-    const message = getMessage();
+    const message = getMessage(language);
     loadPopupContent(message)
   }
 }

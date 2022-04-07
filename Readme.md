@@ -31,15 +31,14 @@ This is what the popup looks like. Image and text message are somewhat randomize
 
 - Put together a list of sites to handle and begin making resist buttons that fit in with the site's design.
   - current progress: 0%.
-- Improve positive feedback mechanism (currently it's just a browser alert... which isn't really a dopamine kick.)
+- Improve positive feedback mechanism
   - current progress: 30%.
   - Remainder:
-    - Requires mobile design.
-    - Requires close dialog edge case handling.
     - Consider adding CTA to close the tab: what should the design look like?
     - Consider adding opacity div to the background of the popup to improve contrast (and enable click to dismiss)
-    - Handle multilingual messages for popup.
     - Might have underestimated the amount of css required. If it gets a lot consider moving to sass.
+    - Amazon does not use media queries to render responsive design. Can we get device type and switch the styling that way..?
+    - Increase variety of messages to 20 per language (target)
 
 
 ## Privacy
