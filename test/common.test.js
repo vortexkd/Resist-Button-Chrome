@@ -9,9 +9,10 @@ describe('common', function() {
       const dom = new JSDOM(`<!DOCTYPE html><p><button id="buyButtonId">Buy Button </button></p>`);
       const docRef = global.document;
       global.document = dom.window.document;
+      global.XPathResult = dom.window.XPathResult;
 
       const res = insertResistButton(
-        'buyButtonId',
+        '//*[@id="buyButtonId"]',
         'resistButtonId',
         'Resist!!'
       );
@@ -19,19 +20,22 @@ describe('common', function() {
       assert.equal(res.id, 'resistButtonId');
       assert.isNotNull(dom.window.document.getElementById('resistButtonId'));
       global.document = docRef;
+      global.XPathResult = undefined;
     });
     it('does not do anything if buyButtonId is not on the page.', () => {
       const dom = new JSDOM(`<!DOCTYPE html><p></p>`);
       const docRef = global.document;
       global.document = dom.window.document;
+      global.XPathResult = dom.window.XPathResult;
 
       const res = insertResistButton(
-        'buyButtonIdNotExist',
+        '//*[@id="buyButtonIdNotExist"]',
         'resistButtonIdNotExist',
         'Resist!!'
       );
       assert.isNull(dom.window.document.getElementById('resistButtonIdNotExist'));
       global.document = docRef;
+      global.XPathResult = undefined;
     });
   });
 })

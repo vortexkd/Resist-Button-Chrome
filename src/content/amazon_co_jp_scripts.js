@@ -12,13 +12,13 @@ if (language?.includes('ja')) {
   buttonText = '我慢する！！'
 }
 
-insertResistButton('buyNow_feature_div',
+insertResistButton('//*[@id="buyNow_feature_div"]',
   'amazon_resist_button',
   buttonText,
   language
 );
 
-insertResistButton('submitOrderButtonId',
+insertResistButton('//*[@id="submitOrderButtonId"]',
   'amazon_resist_button',
   buttonText,
   language

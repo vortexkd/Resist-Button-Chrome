@@ -8,6 +8,8 @@ function pickCorrectJs() {
     return 'src/content/amazon_com_scripts.js';
   } else if (host.match('amazon.co.jp')) {
     return 'src/content/amazon_co_jp_scripts.js';
+  } else if (host.match('rakuten.co.jp')) {
+    return 'src/content/rakuten_co_jp_scripts.js';
   }
   return null;
 }

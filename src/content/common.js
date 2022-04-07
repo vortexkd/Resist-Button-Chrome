@@ -1,10 +1,11 @@
 import {getMessage} from "../messages.js";
 
 
-export function insertResistButton(buyButtonId, resistButtonId, resistButtonText, language = 'en') {
+export function insertResistButton(buyButtonSelector, resistButtonId, resistButtonText, language = 'en') {
   /* inserts a resist button before the specified button Id.
   Allows custom styling using css that matches the resistButtonId */
-  let buyButton = document.getElementById(buyButtonId);
+  // let buyButton = document.getElementById(buyButtonId);
+  let buyButton =  document.evaluate(buyButtonSelector, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue;
   if (!buyButton) {
     console.log("[Resist-button]: No buy buttons found here...");
   } else {
