@@ -17,6 +17,11 @@
       "matches": ["https://www.amazon.co.jp/*"],
       "js": ["src/main.js"],
       "css": ["src/content/styles/amazon_com_styles.css"]
+    },
+    {
+      "matches": ["https://www.amazon.in/*"],
+      "js": ["src/main.js"],
+      "css": ["src/content/styles/amazon_com_styles.css"]
     }
   ],
   "web_accessible_resources":
